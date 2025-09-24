@@ -5,6 +5,17 @@
     --dark-color: #332e29;
     --light-color: #fff;
 }
+.mySwiper {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.swiper-slide iframe {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
 
 .video-grid {
     display: grid;
