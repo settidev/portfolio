@@ -357,6 +357,21 @@
       prevEl: ".swiper-button-prev",
     },
   });
+
+    // Select all iframes (YouTube/Google Drive)
+const videos = document.querySelectorAll(".swiper-slide iframe");
+
+videos.forEach((video) => {
+  // Listen for YouTube API events OR simple focus
+  video.addEventListener("mouseenter", () => {
+    swiper.autoplay.stop(); // stop carousel
+  });
+
+  video.addEventListener("mouseleave", () => {
+    swiper.autoplay.start(); // resume autoplay
+  });
+});
+
 </script>
 
 </html>
