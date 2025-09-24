@@ -14,6 +14,9 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   </head>
   <body>
     <!-- header -->
@@ -169,61 +172,63 @@
           </div>
         </div>
       </section>
-      <!-- video gallery section -->
-      <section id="videos" class="vh-100 py-7">
-        <div class="container">
-          <div class="video-content">
-            <div class="title">
-              <h2>My Video Gallery</h2>
-              <a href="#contact" class="btn-down">
-                <i class="fas fa-chevron-down"></i>
-              </a>
-            </div>
+      <!-- video carousel section -->
+<section id="videos" class="py-7">
+  <div class="container">
+    <div class="video-content">
+      <div class="title">
+        <h2>My Video Gallery</h2>
+      </div>
 
-            <div class="video-grid grid">
-              <div>
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/ScMzIvxBSi4"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                >
-                </iframe>
-              </div>
+      <!-- Swiper container -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <iframe width="100%" height="400"
+              src="https://www.youtube.com/embed/ScMzIvxBSi4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
 
-              <div>
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                >
-                </iframe>
-              </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <iframe width="100%" height="400"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
 
-              <div>
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                >
-                </iframe>
-              </div>
-            </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <iframe width="100%" height="400"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
-      </section>
-      <!-- end of portfolio section -->
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Pagination dots -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end of video carousel section -->
+
 
       <!-- contact section -->
       <section id="contact" class="py-7">
@@ -311,5 +316,28 @@
 
     <!-- typewriting js -->
     <script src="typewriting-master/typewriting.js"></script>
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+
   </body>
 </html>
